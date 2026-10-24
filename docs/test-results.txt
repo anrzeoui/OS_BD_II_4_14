@@ -1,0 +1,22 @@
+test_best_fit (test_allocator.AllocationTests.test_best_fit) ... ok
+test_book_example (test_allocator.AllocationTests.test_book_example) ... ok
+test_cli_book_script (test_allocator.AllocationTests.test_cli_book_script) ... ok
+test_cli_error_script_keeps_running (test_allocator.AllocationTests.test_cli_error_script_keeps_running) ... ok
+test_command_validation (test_allocator.AllocationTests.test_command_validation) ... ok
+test_compaction_preserves_order_sizes_and_is_idempotent (test_allocator.AllocationTests.test_compaction_preserves_order_sizes_and_is_idempotent) ... ok
+test_exact_fit_full_empty_and_one_byte (test_allocator.AllocationTests.test_exact_fit_full_empty_and_one_byte) ... ok
+test_first_fit (test_allocator.AllocationTests.test_first_fit) ... ok
+test_fragmentation_and_compaction (test_allocator.AllocationTests.test_fragmentation_and_compaction) ... ok
+test_invalid_requests_atomic (test_allocator.AllocationTests.test_invalid_requests_atomic) ... ok
+test_invalid_total (test_allocator.AllocationTests.test_invalid_total) ... ok
+test_large_addresses (test_allocator.AllocationTests.test_large_addresses) ... ok
+test_merge_both_neighbors (test_allocator.AllocationTests.test_merge_both_neighbors) ... ok
+test_randomized_independent_byte_oracle (test_allocator.AllocationTests.test_randomized_independent_byte_oracle) ... ok
+test_ties_choose_low_address (test_allocator.AllocationTests.test_ties_choose_low_address) ... ok
+test_unknown_release_atomic (test_allocator.AllocationTests.test_unknown_release_atomic) ... ok
+test_worst_fit (test_allocator.AllocationTests.test_worst_fit) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.093s
+
+OK

@@ -1,0 +1,7 @@
+# Textbook request, release, compaction, status; initial total 1048576
+RQ P0 40000 W
+STAT
+RL P0
+C
+STAT
+X

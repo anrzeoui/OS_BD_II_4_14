@@ -1,0 +1,11 @@
+# Initial total 1500; holes after releases: 400, 200, 600.
+# Try final request with F, B, W separately using the same starting state.
+RQ P0 400 F
+RQ A 100 F
+RQ P1 200 F
+RQ B 200 F
+RL P0
+RL P1
+RQ Q 150 F
+STAT
+X

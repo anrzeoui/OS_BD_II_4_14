@@ -1,0 +1,13 @@
+allocator>RQ P0 40000 W
+P0: [0:39999], 40000 bytes
+allocator>STAT
+Addresses [0:39999] Process P0
+Addresses [40000:1048575] Unused
+allocator>RL P0
+P0 чөлөөлөгдлөө; хөрш hole-ууд нэгтгэгдлээ.
+allocator>C
+Нягтрууллаа. Шилжсэн процесс: 0. 
+allocator>STAT
+Addresses [0:1048575] Unused
+allocator>X
+Программ дууслаа.
