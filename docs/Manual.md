@@ -1,7 +1,7 @@
 # Memory Lab
 ## Хэрэглэгчийн ба operational гарын авлага
 
-F.CSM302 • Бие даалт 1 • II-4-14 • 2026-10-24
+F.CSM302 • Бие даалт 1 • II-4-14 
 
 Зорилго: залгаа санах ой хуваарилалтын F/B/W стратеги, hole, fragmentation, compaction-ийг өөр оролтоор турших. Энэ нь симулятор; бодит RAM дээр процесс ажиллуулахгүй.
 
@@ -15,7 +15,7 @@ ZIP-ийг задалж төслийн хавтсанд терминал нээ�
 
 ```bash
 sudo apt install python3 python3-tk
-cd os-memory-allocation
+cd OS_BD_II_4_14
 python3 -m src.gui
 ```
 
@@ -24,7 +24,7 @@ python3 -m src.gui
 Python-ийн суулгагчид Tcl/Tk бүрэлдэхүүн идэвхтэй байна. ZIP-ийг Extract All хийж, төслийн хавтас руу орно.
 
 ```powershell
-cd os-memory-allocation
+cd OS_BD_II_4_14
 py -3 -m src.gui
 ```
 
@@ -120,8 +120,8 @@ RL P1
 Бодит GitHub URL одоогоор үүсгээгүй. Баг repo-оо нийтэлсний дараа YOUR_ACCOUNT-ыг бодит нэрээр сольж clone хийнэ. URL тодорхойгүй үед ZIP хувилбарыг ашиглана.
 
 ```bash
-git clone https://github.com/YOUR_ACCOUNT/os-memory-allocation.git
-cd os-memory-allocation
+git clone https://github.com/anrzeoui/OS_BD_II_4_14.git
+cd OS_BD_II_4_14
 python3 --version
 python3 -m tkinter
 python3 -m src.gui
