@@ -213,4 +213,4 @@ CLI ба GUI нь **нэг `Allocator` цөм** ашигладаг. Санах �
 - A. Silberschatz, P. B. Galvin, G. Gagne. **Operating System Concepts**, 10th edition, Wiley, 2018. Chapter 9, §9.2; Programming Projects, **P-48–P-50**.
 - **F.CSM302 Бие даалт 1**-ийн удирдамж болон сэдэв, шүүмжийн хуваарилалт.
 - Хэрэгжилт: **Python standard library, Tkinter/Tcl-Tk**. Тест: **unittest**.
-- Код, тест, баримтын эхний хувилбарыг боловсруулахад **ChatGPT/Codex** ашигласан. Дэлгэрэнгүй хэрэгжилт, туршилт, хязгаарлалтыг [төслийн тайлангаас](docs/Report.md) үзнэ.
+
