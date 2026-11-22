@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Editor тохиргоо
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-ийн түр файл
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Нууц тохиргоо
+.env
+.env.*
+!.env.example
+
+# Түр файл
+*.tmp
+*.bak
+~$*

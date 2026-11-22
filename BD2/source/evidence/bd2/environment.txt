@@ -1,0 +1,7 @@
+Test date (Asia/Ulaanbaatar): 2026-11-22
+Baseline: v1.0.2 / 382545ead5ed1f0bade08570f138d805c00b78f8
+OS: Debian GNU/Linux 13.7 x86_64
+Core: Python 3.12.14 and Python 3.13.5
+GUI: system Python 3.13.5 / Tcl-Tk 8.6, real X11 desktop
+GUI sizes: 1340x880 and 1000x800
+No pip dependencies for normal operation or core tests.

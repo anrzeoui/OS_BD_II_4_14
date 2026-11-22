@@ -1,0 +1,34 @@
+test_best_fit (tests.test_allocator.AllocationTests.test_best_fit) ... ok
+test_book_example (tests.test_allocator.AllocationTests.test_book_example) ... ok
+test_cli_book_script (tests.test_allocator.AllocationTests.test_cli_book_script) ... ok
+test_cli_error_script_keeps_running (tests.test_allocator.AllocationTests.test_cli_error_script_keeps_running) ... ok
+test_command_validation (tests.test_allocator.AllocationTests.test_command_validation) ... ok
+test_compaction_preserves_order_sizes_and_is_idempotent (tests.test_allocator.AllocationTests.test_compaction_preserves_order_sizes_and_is_idempotent) ... ok
+test_exact_fit_full_empty_and_one_byte (tests.test_allocator.AllocationTests.test_exact_fit_full_empty_and_one_byte) ... ok
+test_first_fit (tests.test_allocator.AllocationTests.test_first_fit) ... ok
+test_fragmentation_and_compaction (tests.test_allocator.AllocationTests.test_fragmentation_and_compaction) ... ok
+test_invalid_requests_atomic (tests.test_allocator.AllocationTests.test_invalid_requests_atomic) ... ok
+test_invalid_total (tests.test_allocator.AllocationTests.test_invalid_total) ... ok
+test_large_addresses (tests.test_allocator.AllocationTests.test_large_addresses) ... ok
+test_merge_both_neighbors (tests.test_allocator.AllocationTests.test_merge_both_neighbors) ... ok
+test_randomized_independent_byte_oracle (tests.test_allocator.AllocationTests.test_randomized_independent_byte_oracle) ... ok
+test_ties_choose_low_address (tests.test_allocator.AllocationTests.test_ties_choose_low_address) ... ok
+test_unknown_release_atomic (tests.test_allocator.AllocationTests.test_unknown_release_atomic) ... ok
+test_worst_fit (tests.test_allocator.AllocationTests.test_worst_fit) ... ok
+test_invalid_utf8_friendly_error (tests.test_bd2.InputEncodingTests.test_invalid_utf8_friendly_error) ... ok
+test_missing_file_no_traceback (tests.test_bd2.InputEncodingTests.test_missing_file_no_traceback) ... ok
+test_utf8_bom_supported (tests.test_bd2.InputEncodingTests.test_utf8_bom_supported) ... ok
+test_utf8_comments_supported (tests.test_bd2.InputEncodingTests.test_utf8_comments_supported) ... ok
+test_exact_fit_has_zero_remainder (tests.test_bd2.PreviewTests.test_exact_fit_has_zero_remainder) ... ok
+test_fragmentation_preview_then_compaction (tests.test_bd2.PreviewTests.test_fragmentation_preview_then_compaction) ... ok
+test_invalid_previews_do_not_mutate (tests.test_bd2.PreviewTests.test_invalid_previews_do_not_mutate) ... ok
+test_preview_matches_real_allocation (tests.test_bd2.PreviewTests.test_preview_matches_real_allocation) ... ok
+test_three_strategies_same_state (tests.test_bd2.PreviewTests.test_three_strategies_same_state) ... ok
+test_fragmentation_expected_failure_and_recovery (tests.test_bd2.ScenarioTests.test_fragmentation_expected_failure_and_recovery) ... ok
+test_full_memory_and_coalescing (tests.test_bd2.ScenarioTests.test_full_memory_and_coalescing) ... ok
+test_replay_every_prefix_is_deterministic (tests.test_bd2.ScenarioTests.test_replay_every_prefix_is_deterministic) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.327s
+
+OK

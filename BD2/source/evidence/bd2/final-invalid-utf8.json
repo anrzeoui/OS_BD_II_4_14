@@ -1,0 +1,5 @@
+{
+  "exit_code": 2,
+  "traceback": false,
+  "stderr": "usage: cli.py [-h] [--file FILE] total\ncli.py: error: Командын файл UTF-8 текст байх ёстой. UTF-8-аар хадгалаад дахин оролдоно уу.\n"
+}

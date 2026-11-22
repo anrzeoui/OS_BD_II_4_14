@@ -1,0 +1,1340 @@
+{
+  "fragmentation": [
+    {
+      "command": "RQ P0 300 F",
+      "ok": true,
+      "message": "P0: [0:299], 300 bytes",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 0,
+          "free": 1000,
+          "holes": 1,
+          "largest_hole": 1000,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 1000,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 300,
+          "free": 700,
+          "holes": 1,
+          "largest_hole": 700,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": "P0",
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 700,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ P1 200 F",
+      "ok": true,
+      "message": "P1: [300:499], 200 bytes",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 300,
+          "free": 700,
+          "holes": 1,
+          "largest_hole": 700,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": "P0",
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 700,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 1,
+          "largest_hole": 500,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": "P0",
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 500,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ P2 300 F",
+      "ok": true,
+      "message": "P2: [500:799], 300 bytes",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 1,
+          "largest_hole": 500,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": "P0",
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 500,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 800,
+          "free": 200,
+          "holes": 1,
+          "largest_hole": 200,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": "P0",
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 300,
+            "pid": "P2",
+            "end": 799
+          },
+          {
+            "start": 800,
+            "size": 200,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    },
+    {
+      "command": "RL P0",
+      "ok": true,
+      "message": "P0 чөлөөлөгдлөө; хөрш hole-ууд нэгтгэгдлээ.",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 800,
+          "free": 200,
+          "holes": 1,
+          "largest_hole": 200,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": "P0",
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 300,
+            "pid": "P2",
+            "end": 799
+          },
+          {
+            "start": 800,
+            "size": 200,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 2,
+          "largest_hole": 300,
+          "fragmentation": 0.4
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": null,
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 300,
+            "pid": "P2",
+            "end": 799
+          },
+          {
+            "start": 800,
+            "size": 200,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ P3 400 F",
+      "ok": false,
+      "message": "Нийт сул зай хүрэлцээтэй ч залгаа hole хүрэлцэхгүй. C командаар нягтруулж болно.",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 2,
+          "largest_hole": 300,
+          "fragmentation": 0.4
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": null,
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 300,
+            "pid": "P2",
+            "end": 799
+          },
+          {
+            "start": 800,
+            "size": 200,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 2,
+          "largest_hole": 300,
+          "fragmentation": 0.4
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": null,
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 300,
+            "pid": "P2",
+            "end": 799
+          },
+          {
+            "start": 800,
+            "size": 200,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    },
+    {
+      "command": "C",
+      "ok": true,
+      "message": "Нягтрууллаа. Шилжсэн процесс: 2. P1: 300 -> 0; P2: 500 -> 200",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 2,
+          "largest_hole": 300,
+          "fragmentation": 0.4
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 300,
+            "pid": null,
+            "end": 299
+          },
+          {
+            "start": 300,
+            "size": 200,
+            "pid": "P1",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 300,
+            "pid": "P2",
+            "end": 799
+          },
+          {
+            "start": 800,
+            "size": 200,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 1,
+          "largest_hole": 500,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 200,
+            "pid": "P1",
+            "end": 199
+          },
+          {
+            "start": 200,
+            "size": 300,
+            "pid": "P2",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 500,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ P3 400 F",
+      "ok": true,
+      "message": "P3: [500:899], 400 bytes",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 500,
+          "free": 500,
+          "holes": 1,
+          "largest_hole": 500,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 200,
+            "pid": "P1",
+            "end": 199
+          },
+          {
+            "start": 200,
+            "size": 300,
+            "pid": "P2",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 500,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 900,
+          "free": 100,
+          "holes": 1,
+          "largest_hole": 100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 200,
+            "pid": "P1",
+            "end": 199
+          },
+          {
+            "start": 200,
+            "size": 300,
+            "pid": "P2",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 400,
+            "pid": "P3",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 100,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    },
+    {
+      "command": "STAT",
+      "ok": true,
+      "message": "Addresses [0:199] Process P1\nAddresses [200:499] Process P2\nAddresses [500:899] Process P3\nAddresses [900:999] Unused",
+      "before": {
+        "stats": {
+          "total": 1000,
+          "used": 900,
+          "free": 100,
+          "holes": 1,
+          "largest_hole": 100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 200,
+            "pid": "P1",
+            "end": 199
+          },
+          {
+            "start": 200,
+            "size": 300,
+            "pid": "P2",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 400,
+            "pid": "P3",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 100,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1000,
+          "used": 900,
+          "free": 100,
+          "holes": 1,
+          "largest_hole": 100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 200,
+            "pid": "P1",
+            "end": 199
+          },
+          {
+            "start": 200,
+            "size": 300,
+            "pid": "P2",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 400,
+            "pid": "P3",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 100,
+            "pid": null,
+            "end": 999
+          }
+        ]
+      }
+    }
+  ],
+  "strategies": [
+    {
+      "command": "RQ P0 400 F",
+      "ok": true,
+      "message": "P0: [0:399], 400 bytes",
+      "before": {
+        "stats": {
+          "total": 1500,
+          "used": 0,
+          "free": 1500,
+          "holes": 1,
+          "largest_hole": 1500,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 1500,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1500,
+          "used": 400,
+          "free": 1100,
+          "holes": 1,
+          "largest_hole": 1100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 1100,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ A 100 F",
+      "ok": true,
+      "message": "A: [400:499], 100 bytes",
+      "before": {
+        "stats": {
+          "total": 1500,
+          "used": 400,
+          "free": 1100,
+          "holes": 1,
+          "largest_hole": 1100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 1100,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1500,
+          "used": 500,
+          "free": 1000,
+          "holes": 1,
+          "largest_hole": 1000,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 1000,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ P1 200 F",
+      "ok": true,
+      "message": "P1: [500:699], 200 bytes",
+      "before": {
+        "stats": {
+          "total": 1500,
+          "used": 500,
+          "free": 1000,
+          "holes": 1,
+          "largest_hole": 1000,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 1000,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1500,
+          "used": 700,
+          "free": 800,
+          "holes": 1,
+          "largest_hole": 800,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 200,
+            "pid": "P1",
+            "end": 699
+          },
+          {
+            "start": 700,
+            "size": 800,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ B 200 F",
+      "ok": true,
+      "message": "B: [700:899], 200 bytes",
+      "before": {
+        "stats": {
+          "total": 1500,
+          "used": 700,
+          "free": 800,
+          "holes": 1,
+          "largest_hole": 800,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 200,
+            "pid": "P1",
+            "end": 699
+          },
+          {
+            "start": 700,
+            "size": 800,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1500,
+          "used": 900,
+          "free": 600,
+          "holes": 1,
+          "largest_hole": 600,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 200,
+            "pid": "P1",
+            "end": 699
+          },
+          {
+            "start": 700,
+            "size": 200,
+            "pid": "B",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 600,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      }
+    },
+    {
+      "command": "RL P0",
+      "ok": true,
+      "message": "P0 чөлөөлөгдлөө; хөрш hole-ууд нэгтгэгдлээ.",
+      "before": {
+        "stats": {
+          "total": 1500,
+          "used": 900,
+          "free": 600,
+          "holes": 1,
+          "largest_hole": 600,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": "P0",
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 200,
+            "pid": "P1",
+            "end": 699
+          },
+          {
+            "start": 700,
+            "size": 200,
+            "pid": "B",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 600,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1500,
+          "used": 500,
+          "free": 1000,
+          "holes": 2,
+          "largest_hole": 600,
+          "fragmentation": 0.4
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": null,
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 200,
+            "pid": "P1",
+            "end": 699
+          },
+          {
+            "start": 700,
+            "size": 200,
+            "pid": "B",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 600,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      }
+    },
+    {
+      "command": "RL P1",
+      "ok": true,
+      "message": "P1 чөлөөлөгдлөө; хөрш hole-ууд нэгтгэгдлээ.",
+      "before": {
+        "stats": {
+          "total": 1500,
+          "used": 500,
+          "free": 1000,
+          "holes": 2,
+          "largest_hole": 600,
+          "fragmentation": 0.4
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": null,
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 200,
+            "pid": "P1",
+            "end": 699
+          },
+          {
+            "start": 700,
+            "size": 200,
+            "pid": "B",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 600,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 1500,
+          "used": 300,
+          "free": 1200,
+          "holes": 3,
+          "largest_hole": 600,
+          "fragmentation": 0.5
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 400,
+            "pid": null,
+            "end": 399
+          },
+          {
+            "start": 400,
+            "size": 100,
+            "pid": "A",
+            "end": 499
+          },
+          {
+            "start": 500,
+            "size": 200,
+            "pid": null,
+            "end": 699
+          },
+          {
+            "start": 700,
+            "size": 200,
+            "pid": "B",
+            "end": 899
+          },
+          {
+            "start": 900,
+            "size": 600,
+            "pid": null,
+            "end": 1499
+          }
+        ]
+      }
+    }
+  ],
+  "comparison": [
+    {
+      "strategy": "F",
+      "ok": true,
+      "start": 0,
+      "end": 149,
+      "hole_size": 400,
+      "remainder": 250,
+      "stats_after": {
+        "total": 1500,
+        "used": 450,
+        "free": 1050,
+        "holes": 3,
+        "largest_hole": 600,
+        "fragmentation": 0.4285714285714286
+      }
+    },
+    {
+      "strategy": "B",
+      "ok": true,
+      "start": 500,
+      "end": 649,
+      "hole_size": 200,
+      "remainder": 50,
+      "stats_after": {
+        "total": 1500,
+        "used": 450,
+        "free": 1050,
+        "holes": 3,
+        "largest_hole": 600,
+        "fragmentation": 0.4285714285714286
+      }
+    },
+    {
+      "strategy": "W",
+      "ok": true,
+      "start": 900,
+      "end": 1049,
+      "hole_size": 600,
+      "remainder": 450,
+      "stats_after": {
+        "total": 1500,
+        "used": 450,
+        "free": 1050,
+        "holes": 3,
+        "largest_hole": 450,
+        "fragmentation": 0.5714285714285714
+      }
+    }
+  ],
+  "boundary": [
+    {
+      "command": "RQ A 40 F",
+      "ok": true,
+      "message": "A: [0:39], 40 bytes",
+      "before": {
+        "stats": {
+          "total": 100,
+          "used": 0,
+          "free": 100,
+          "holes": 1,
+          "largest_hole": 100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 100,
+            "pid": null,
+            "end": 99
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 100,
+          "used": 40,
+          "free": 60,
+          "holes": 1,
+          "largest_hole": 60,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": "A",
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": null,
+            "end": 99
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ B 60 B",
+      "ok": true,
+      "message": "B: [40:99], 60 bytes",
+      "before": {
+        "stats": {
+          "total": 100,
+          "used": 40,
+          "free": 60,
+          "holes": 1,
+          "largest_hole": 60,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": "A",
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": null,
+            "end": 99
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 100,
+          "used": 100,
+          "free": 0,
+          "holes": 0,
+          "largest_hole": 0,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": "A",
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": "B",
+            "end": 99
+          }
+        ]
+      }
+    },
+    {
+      "command": "RQ C 1 W",
+      "ok": false,
+      "message": "Сул санах ой хүрэлцэхгүй: хүсэлт 1, сул 0.",
+      "before": {
+        "stats": {
+          "total": 100,
+          "used": 100,
+          "free": 0,
+          "holes": 0,
+          "largest_hole": 0,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": "A",
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": "B",
+            "end": 99
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 100,
+          "used": 100,
+          "free": 0,
+          "holes": 0,
+          "largest_hole": 0,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": "A",
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": "B",
+            "end": 99
+          }
+        ]
+      }
+    },
+    {
+      "command": "RL A",
+      "ok": true,
+      "message": "A чөлөөлөгдлөө; хөрш hole-ууд нэгтгэгдлээ.",
+      "before": {
+        "stats": {
+          "total": 100,
+          "used": 100,
+          "free": 0,
+          "holes": 0,
+          "largest_hole": 0,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": "A",
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": "B",
+            "end": 99
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 100,
+          "used": 60,
+          "free": 40,
+          "holes": 1,
+          "largest_hole": 40,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": null,
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": "B",
+            "end": 99
+          }
+        ]
+      }
+    },
+    {
+      "command": "RL B",
+      "ok": true,
+      "message": "B чөлөөлөгдлөө; хөрш hole-ууд нэгтгэгдлээ.",
+      "before": {
+        "stats": {
+          "total": 100,
+          "used": 60,
+          "free": 40,
+          "holes": 1,
+          "largest_hole": 40,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 40,
+            "pid": null,
+            "end": 39
+          },
+          {
+            "start": 40,
+            "size": 60,
+            "pid": "B",
+            "end": 99
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 100,
+          "used": 0,
+          "free": 100,
+          "holes": 1,
+          "largest_hole": 100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 100,
+            "pid": null,
+            "end": 99
+          }
+        ]
+      }
+    },
+    {
+      "command": "C",
+      "ok": true,
+      "message": "Нягтрууллаа. Шилжсэн процесс: 0. ",
+      "before": {
+        "stats": {
+          "total": 100,
+          "used": 0,
+          "free": 100,
+          "holes": 1,
+          "largest_hole": 100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 100,
+            "pid": null,
+            "end": 99
+          }
+        ]
+      },
+      "after": {
+        "stats": {
+          "total": 100,
+          "used": 0,
+          "free": 100,
+          "holes": 1,
+          "largest_hole": 100,
+          "fragmentation": 0.0
+        },
+        "blocks": [
+          {
+            "start": 0,
+            "size": 100,
+            "pid": null,
+            "end": 99
+          }
+        ]
+      }
+    }
+  ]
+}

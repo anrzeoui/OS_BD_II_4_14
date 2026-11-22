@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-22",
+  "report_pages": 10,
+  "manual_pages": 7,
+  "poster_pages": 1,
+  "visual_review": "All pages inspected; title borders removed; table widths and poster bottom layout corrected.",
+  "core_tests": 29,
+  "gui_checks": 33,
+  "qr_decoded_target": "https://github.com/anrzeoui/OS_BD_II_4_14/releases/tag/v2.0.0",
+  "publication_status": "Not published: GitHub integration write permission denied; browser sign-in required."
+}
