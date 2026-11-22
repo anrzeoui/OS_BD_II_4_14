@@ -1,0 +1,26 @@
+allocator>RQ P0 300 F
+P0: [0:299], 300 bytes
+allocator>RQ P1 200 F
+P1: [300:499], 200 bytes
+allocator>RQ P2 300 F
+P2: [500:799], 300 bytes
+allocator>RL P0
+P0 чөлөөлөгдлөө; хөрш hole-ууд нэгтгэгдлээ.
+allocator>STAT
+Addresses [0:299] Unused
+Addresses [300:499] Process P1
+Addresses [500:799] Process P2
+Addresses [800:999] Unused
+allocator>RQ P3 400 F
+ERROR: Нийт сул зай хүрэлцээтэй ч залгаа hole хүрэлцэхгүй. C командаар нягтруулж болно.
+allocator>C
+Нягтрууллаа. Шилжсэн процесс: 2. P1: 300 -> 0; P2: 500 -> 200
+allocator>RQ P3 400 F
+P3: [500:899], 400 bytes
+allocator>STAT
+Addresses [0:199] Process P1
+Addresses [200:499] Process P2
+Addresses [500:899] Process P3
+Addresses [900:999] Unused
+allocator>X
+Программ дууслаа.

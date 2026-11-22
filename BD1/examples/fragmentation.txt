@@ -1,0 +1,11 @@
+# Initial total 1000; the first RQ P3 fails intentionally.
+RQ P0 300 F
+RQ P1 200 F
+RQ P2 300 F
+RL P0
+STAT
+RQ P3 400 F
+C
+RQ P3 400 F
+STAT
+X

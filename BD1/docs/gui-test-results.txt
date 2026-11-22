@@ -1,0 +1,1 @@
+GUI smoke: 14 checks passed (demo, failure, compaction, export, reset, timer, minimum window).
